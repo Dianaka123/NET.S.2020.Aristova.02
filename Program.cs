@@ -95,6 +95,8 @@ namespace NET.S._2020.Aristova._02
 
             x = Math.Round(WorkWithNumber.FindNthRoot(9, 0.004241979, 0.00000001), 3);
             Assert.AreEqual(x, 0.545, 0.0001);
+
+            Assert.Catch(typeof(ArgumentException), () => WorkWithNumber.FindNthRoot(-2, 2));
         }
 
     }

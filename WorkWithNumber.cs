@@ -109,7 +109,10 @@ namespace NET.S._2020.Aristova._02
 
         public static double FindNthRoot(double n, double A, double eps = 0.0001)
         {
-            
+            if (n <= 0)
+            {
+                throw new ArgumentException();
+            }
             var x0 = A / n;
             var x1 = (1 / n) * ((n - 1) * x0 + A / Math.Pow(x0, (int)n - 1));
 
